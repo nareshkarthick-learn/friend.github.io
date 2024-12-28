@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="line">🎉 Happy Birthday 🎉</div>
+    <div class="bf">
+      <div class="songinfo">
+        <div class="albumcover">
+          <img
+            src="friend image.jpeg"
+            alt="Surprise Image"
+            width="150"
+            height="100"
+          />
+        </div>
+        <div class="details">
+          <strong>File Name:</strong> Birthday_Surprise.jpg
+        </div>
+        <div class="details"><strong>File Size:</strong> 2.5 MB</div>
+        <div class="details"><strong>Format:</strong> JPG</div>
+        <div class="details"><strong>Duration:</strong> Forever Fun! 😄</div>
+        <div class="download">
+          <div class="dlink">
+            <a href="#" id="download-link">Click Here for the Surprise 🎁</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line">Made with ❤️ for fun!</div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+Tamil&display=swap");
+
+      body {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 700px;
+        font-family: "Inter", "Noto Sans Tamil", sans-serif;
+        background: #f9f9f9;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #3b3b3b;
+      }
+
+      .line {
+        background-color: #308bcf;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px 10px;
+        text-align: center;
+      }
+
+      .bf {
+        border-left: 4px solid #c3eff2;
+        padding: 10px;
+        margin: 20px auto;
+        background: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .albumcover img {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        max-width: 150px;
+      }
+
+      .details {
+        margin: 10px 0;
+      }
+
+      .dlink a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #308bcf;
+        border-radius: 5px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .dlink a:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+      }
+    </style>
+
+    <script src="script.js">
+              // Automatically download the file when the link is clicked
+      document
+        .getElementById("download-link")
+        .addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent the default link behavior
+
+          // Create a hidden <a> element to trigger the download
+          const a = document.createElement("a");
+          a.href = "friend image.jpeg,"; // Path to the image file
+          a.download = "Birthday_Surprise.jpg"; // Name of the downloaded file
+          document.body.appendChild(a); // Append the link to the body
+          a.click(); // Simulate a click
+          document.body.removeChild(a); // Remove the link after download
+        });
+    </script>
+  </body>
+</html>
