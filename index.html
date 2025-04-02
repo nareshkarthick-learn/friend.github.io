@@ -14,6 +14,65 @@
         <button class="btn" onclick="showMessage()">Get Started</button>
         <p id="message"></p>
     </div>
-    <script src="index.js"></script>
+    <script>
+        function showMessage() {
+    let message = document.getElementById("message");
+    message.textContent = "Welcome to the pixel experience!";
+    message.style.opacity = "1";
+}
+    </script>
+<style>
+    body {
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+#message {
+    font-size: 1.1em;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+</style>
 </body>
 </html>
